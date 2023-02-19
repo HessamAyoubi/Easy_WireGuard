@@ -12,7 +12,7 @@ This script automates the setup of a WireGuard VPN server on Debian based Linux.
 <H2>Installation</H2>
 Download the script:
 
-<pre><code>wget https://raw.githubusercontent.com/HessamAyoubi/Easy_WireGuard/5a018ea91450945dbe64d41df7268eacdd632a95/wireguard-setup.sh</code></pre>
+<pre><code>wget https://raw.githubusercontent.com/HessamAyoubi/Easy_WireGuard/main/wireguard-setup.sh</code></pre>
 
 Make the script executable:
 
