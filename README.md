@@ -5,7 +5,7 @@ This is a bash script that will setup a WireGuard VPN on a Debian based Linux se
 This script automates the setup of a WireGuard VPN server on Debian based Linux. It generates public and private keys for the server and client, creates the WireGuard configuration file, sets Google DNS servers, enables IP forwarding and Masquerade, and sets the WireGuard interface IP address.
 
 <H2>Requirements</H2>
-<li>A Linux machine running Ubuntu, Debian, or CentOS.</li>
+<li>A machine running Debian based Linux.</li>
 <li>Sudo privileges on the Linux machine.</li>
 <li>Internet access to download and install the WireGuard package.</li>
 
@@ -24,9 +24,10 @@ Run the script with sudo privileges:
 
 Follow the on-screen prompts to configure your WireGuard server.
 
-<H2>Configuration</H2><p>You cany modify them by changing the script</p>
+<H2>Configuration</H2>
+<p>You cany modify the configuration by changing the script</p>
 
-Server address: The IP address or hostname of your server (The script will prompt you for this information)</br>
+Server address: The IP address or hostname of your server</br>
 Server port: 51820</br>
 Client IP range: 10.1.1.0/24</br>
 DNS server: 8.8.8.8</br>
@@ -39,6 +40,6 @@ It will also generate client.config for the client.
 
 <li>If you can't see the WireGuard tunnel interface on the server after running the script and the VPN doesn't work, check the configuration file at <code>/etc/wireguard/wg0.conf</code></li>
 
-<li>If the WireGuard service is inactive and you get an error like <code>"/usr/bin/wg-quick: line 32: resolvconf: command not found"</code>, install the resolvconf package:
-
+<li>If the WireGuard service is inactive and you get an error like <code>"resolvconf: command not found"</code>, install the resolvconf package:</br>
+</br>
 <pre><code>sudo apt-get install resolvconf</code></pre></li>
