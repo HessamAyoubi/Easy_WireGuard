@@ -12,15 +12,15 @@ This script automates the setup of a WireGuard VPN server on Debian based Linux.
 <H2>Installation</H2>
 Download the script:
 
-<code>wget https://github.com/HessamAyoubi/Easy_WireGuard/blob/5a018ea91450945dbe64d41df7268eacdd632a95/wireguard-setup.sh</code>
+<pre><code>wget https://raw.githubusercontent.com/HessamAyoubi/Easy_WireGuard/5a018ea91450945dbe64d41df7268eacdd632a95/wireguard-setup.sh</code></pre>
 
 Make the script executable:
 
-<code>chmod +x wireguard-setup.sh</code>
+<pre><code>chmod +x wireguard-setup.sh</code></pre>
 
 Run the script with sudo privileges:
 
-<code>sudo ./wireguard-setup.sh</code>
+<pre><code>sudo ./wireguard-setup.sh</code></pre>
 
 Follow the on-screen prompts to configure your WireGuard server.
 
@@ -35,10 +35,10 @@ The script will generate a server configuration file (wg0.conf) in the /etc/wire
 It will also generate client.config for the client.
 
 <H2>Troubleshooting</H2>
-If you can't access the Internet or ping any public IP after connecting with WireGuard, check the firewall settings on your server and client devices.
+<li>If you can't access the Internet or ping any public IP after connecting with WireGuard, check the firewall settings on your server and client devices.</li>
 
-If you can't see the WireGuard tunnel interface on the server after running the script and the VPN doesn't work, check the configuration file at /etc/wireguard/wg0.conf.
+<li>If you can't see the WireGuard tunnel interface on the server after running the script and the VPN doesn't work, check the configuration file at <code>/etc/wireguard/wg0.conf</code></li>
 
-If the WireGuard service is inactive and you get an error like <code>"/usr/bin/wg-quick: line 32: resolvconf: command not found"</code>, install the resolvconf package:
+<li>If the WireGuard service is inactive and you get an error like <code>"/usr/bin/wg-quick: line 32: resolvconf: command not found"</code>, install the resolvconf package:
 
-<code>sudo apt-get install resolvconf</code>
+<pre><code>sudo apt-get install resolvconf</code></pre></li>
