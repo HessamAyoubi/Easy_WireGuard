@@ -3,6 +3,18 @@
 # Secure WireGuard server installer
 # https://github.com/HessamAyoubi/Easy_WireGuard/
 
+echo "Welcome to the WireGuard server setup script!"
+
+# Check if running as root
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Please run this script as root."
+  exit 1
+fi
+
+# Install WireGuard
+apt-get update
+apt-get install -y wireguard
+
 # Generate public and private keys for server and client
 server_priv_key=$(wg genkey)
 server_pub_key=$(echo $server_priv_key | wg pubkey)
